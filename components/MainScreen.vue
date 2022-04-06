@@ -33,9 +33,9 @@ export default {
 <style lang='scss' scoped>
 .main-screen {
   padding-top: 110px;
-  min-height: 100vh;
   background: linear-gradient(161.68deg, #1F0C71 27.28%, #041344 67.8%);
   overflow: hidden;
+  padding-bottom: 35px;
 
   &__container {
     display: flex;

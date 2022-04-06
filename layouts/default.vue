@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class='default-layouts'>
     <base-header />
     <main>
       <Nuxt />
@@ -14,5 +14,7 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-
+.default-layouts {
+  overflow: hidden;
+}
 </style>

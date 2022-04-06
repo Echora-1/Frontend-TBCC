@@ -34,6 +34,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 120px;
 
     p {
       margin-top: 22px;
