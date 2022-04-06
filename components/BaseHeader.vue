@@ -47,6 +47,10 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+.container {
+  max-width: 1440px;
+}
+
 header {
   position: fixed;
   top: 40px;
@@ -73,8 +77,8 @@ nav {
 }
 
 .logo {
-  @media (min-width: 1440px) {
-    margin-right: 50px;
+  @media (min-width: 1200px) {
+    margin-right: 70px;
   }
 }
 

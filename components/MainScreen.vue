@@ -17,9 +17,7 @@
         <img src='../assets/img/main-screen.png' alt='' width='748' height='637'>
       </div>
     </div>
-    <div class='container'>
-      <advantage-list class='main-screen__advantage-list ' />
-    </div>
+    <advantage-list class='container' />
   </div>
 </template>
 
@@ -37,10 +35,12 @@ export default {
   padding-top: 110px;
   min-height: 100vh;
   background: linear-gradient(161.68deg, #1F0C71 27.28%, #041344 67.8%);
+  overflow: hidden;
 
   &__container {
     display: flex;
     align-items: center;
+    margin-bottom: 25px;
   }
 
 
@@ -50,24 +50,31 @@ export default {
     margin-left: auto;
   }
 
+  &__text {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
   &__img {
-    flex: 0 0 52%;
-    max-width: 52%;
+    flex: 0 0 50%;
+    max-width: 50%;
     justify-self: center;
     img {
       height: 100%;
       width: 100%;
       object-fit: cover;
+      position: relative;
+      top: -20px;
+      right: -40px;
 
-      @media (min-width: 1440px) {
+      @media (min-width: 1200px) {
         width: auto;
+        right: 0;
       }
     }
   }
 
   &__advantage-list {
-    margin: 25px auto 0;
-    max-width: 1100px;
     width: 100%;
   }
 }
