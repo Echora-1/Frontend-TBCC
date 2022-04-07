@@ -1,5 +1,5 @@
 {
-  "name": "TBCC-test-task",
+  "name": "TBCC",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -11,10 +11,9 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
-    "compass-mixins": "^0.12.11",
     "core-js": "^3.15.1",
-    "gsap": "^3.10.2",
     "nuxt": "^2.15.7",
+    "nuxt-start": "^2.15.8",
     "vue-click-outside": "^1.1.0"
   },
   "devDependencies": {

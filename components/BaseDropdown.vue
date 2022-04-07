@@ -160,7 +160,7 @@ export default {
   padding: 2px 4px;
   background-color: transparent;
   background-repeat: no-repeat;
-  background-image: url("../assets/img/vector.svg");
+  background-image: url("assets/img/vector.svg");
   background-position: center right;
   font-weight: 400;
   font-size: 16px;

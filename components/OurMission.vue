@@ -2,7 +2,9 @@
   <div class='our-mission'>
     <div class='our-mission__container container'>
       <div class='our-mission__img'>
-        <img src='../assets/img/our-mission.png' alt=''>
+        <picture>
+          <img src='img/our-mission.png'  srcset="img/our-mission@2x.png 2x" alt=''>
+        </picture>
       </div>
       <div class='our-mission__content'>
         <our-mission-text/>

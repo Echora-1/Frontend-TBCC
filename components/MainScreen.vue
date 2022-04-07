@@ -14,7 +14,9 @@
         </div>
       </div>
       <div class='main-screen__img'>
-        <img src='../assets/img/main-screen.png' alt='' width='748' height='637'>
+        <picture>
+          <img src='img/main-screen.png' srcset="img/main-screen@2x.png 2x" alt='' width='748' height='637'>
+        </picture>
       </div>
     </div>
     <advantage-list class='container' />

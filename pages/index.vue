@@ -27,13 +27,14 @@ export default {
     content: "";
     min-width: 1440px;
     min-height: 1200px;
-    background-image: url("../assets/img/bg-our-mission.svg");
+    background-image: url("assets/img/bg-our-mission.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     top: -70px;
     right: 0;
     position: absolute;
+    pointer-events: none;
   }
 }
 </style>

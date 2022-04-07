@@ -5,13 +5,14 @@
       <p class='ecosystem__subtitle'> TBCC offers up-to-date financial services that allow you to invest, earn, save and pay the bills using cryptocurrency within the same ecosystem.</p>
       <div class='ecosystem__content content'>
           <div class='content__tabs'>
-
+            <ecosystem-tabs />
           </div>
           <div class='content__cube cube'>
             <div class='cube__wrap'>
-              <icon-cube />
+              <icon-cube class='cube__item' />
             </div>
           </div>
+
       </div>
     </div>
   </div>
@@ -20,8 +21,9 @@
 <script>
 import EcosystemText from './icon/EcosystemText'
 import IconCube from './icon/IconCube'
+import EcosystemTabs from './EcosystemTabs'
 export default {
-  components: { IconCube, EcosystemText }
+  components: { EcosystemTabs, IconCube, EcosystemText,  }
 }
 </script>
 
@@ -58,6 +60,7 @@ export default {
   display: flex;
   width: 100%;
   overflow: hidden;
+  align-items: center;
 
   &__tabs,
   &__cube {
@@ -74,18 +77,9 @@ export default {
   &__wrap {
     position: relative;
     overflow: visible;
-    min-height: 520px;
     display: flex;
     align-items: center;
-  }
-
-  &__bg {
-    position: absolute;
-    top: -100px;
-    left: -50%;
-    z-index: 1;
-    overflow: visible;
-    pointer-events: none;
+    top: -50px;
   }
 
 }
