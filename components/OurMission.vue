@@ -21,7 +21,6 @@ export default {
 
 <style lang='scss' scoped>
 .our-mission {
-  min-height: 100vh;
   overflow: hidden;
 
   &__container {

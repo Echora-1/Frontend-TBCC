@@ -3,6 +3,7 @@
     <main-screen />
     <div class='our-mission-and-ecosystem'>
       <our-mission />
+      <ecosystem-block />
     </div>
   </div>
 </template>
@@ -10,8 +11,9 @@
 <script>
 import MainScreen from '../components/MainScreen'
 import OurMission from '../components/OurMission'
+import EcosystemBlock from '../components/EcosystemBlock'
 export default {
-  components: { OurMission, MainScreen }
+  components: { EcosystemBlock, OurMission, MainScreen }
 }
 </script>
 
@@ -29,7 +31,7 @@ export default {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    top: -30px;
+    top: -70px;
     right: 0;
     position: absolute;
   }
