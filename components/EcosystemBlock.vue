@@ -12,7 +12,6 @@
               <icon-cube class='cube__item' />
             </div>
           </div>
-
       </div>
     </div>
   </div>
@@ -29,8 +28,6 @@ export default {
 
 <style lang='scss' scoped>
 .ecosystem {
-  min-height: 100vh;
-
   &__container {
     display: flex;
     flex-direction: column;
@@ -60,12 +57,16 @@ export default {
   display: flex;
   width: 100%;
   overflow: hidden;
-  align-items: center;
+  transform: translateX(40px);
 
   &__tabs,
   &__cube {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+
+  &__tabs {
+    padding-top: 120px;
   }
 }
 
@@ -81,6 +82,6 @@ export default {
     align-items: center;
     top: -50px;
   }
-
 }
+
 </style>
