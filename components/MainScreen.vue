@@ -2,7 +2,7 @@
   <div class='main-screen'>
     <div class='main-screen__container container'>
       <div class='main-screen__content content'>
-        <main-screen-text class='content__title' />
+        <p class='content__title base-title'>Powerful Ecosystem in One Place</p>
         <p class='content__description'>Pay, trade and invest in the smart decentralized ecosystem.</p>
         <div class='content__actions'>
           <base-button shaded>
@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class='main-screen__img'>
-         <img src='img/main-screen.png' alt='' width='748' height='637'>
+         <main-screen-img/>
       </div>
     </div>
     <advantage-list class='container' />
@@ -22,11 +22,11 @@
 </template>
 
 <script>
-import MainScreenText from './icon/MainScreenText'
 import BaseButton from './BaseButton'
 import AdvantageList from './AdvantageList'
+import MainScreenImg from './icon/MainScreenImg'
 export default {
-  components: { AdvantageList, BaseButton, MainScreenText }
+  components: { MainScreenImg, AdvantageList, BaseButton }
 }
 </script>
 
@@ -40,7 +40,6 @@ export default {
   &__container {
     display: flex;
     align-items: center;
-    margin-bottom: 25px;
     transform: translateX(40px);
 
     @media (min-width: 1200px) {
@@ -64,7 +63,7 @@ export default {
     flex: 0 0 50%;
     max-width: 50%;
     justify-self: center;
-    img {
+    svg {
       height: 100%;
       width: 100%;
       object-fit: cover;
@@ -87,10 +86,10 @@ export default {
 .content {
   margin-left: auto;
   &__title {
-    max-width: 538px;
-    max-height: 120px;
-    width: 100%;
-    height: 100%;
+    max-width: 570px;
+    font-weight: 700;
+    font-size: 60px;
+    margin: 0 0 30px;
   }
 
   &__description {
@@ -98,8 +97,7 @@ export default {
     font-size: 20px;
     line-height: 28px;
     color: #CED7E7;
-    margin-top: 30px;
-    margin-bottom: 45px;
+    margin: 0 0 45px;
     font-weight: 300;
   }
 

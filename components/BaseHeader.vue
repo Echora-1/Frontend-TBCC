@@ -91,8 +91,12 @@ nav {
   &__container {
     display: flex;
     align-items: center;
-    padding: 16px 40px;
+    padding: 16px 30px;
     max-width: 1440px;
+
+    @media (min-width: 1200px) {
+      padding: 16px 40px;
+    }
   }
 
   &--scroll {
