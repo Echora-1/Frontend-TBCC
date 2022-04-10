@@ -6,10 +6,14 @@
       <ecosystem-block />
     </div>
     <div class='download-app-wrap'>
-      <download-app class='app' />
+      <download-app/>
     </div>
-    <div class='price-overview-wrap'>
-      <price-overview />
+    <div class='price-overview-and-faq'>
+      <price-overview class='price-overview-wrap' />
+      <faq-block class='faq-wrap' />
+    </div>
+    <div class='tbcc-news-wrap'>
+      <tbcc-news />
     </div>
   </div>
 </template>
@@ -20,8 +24,10 @@ import OurMission from '../components/OurMission'
 import EcosystemBlock from '../components/EcosystemBlock'
 import DownloadApp from '../components/DownloadApp'
 import PriceOverview from '../components/PriceOverview'
+import FaqBlock from '../components/FaqBlock'
+import TbccNews from '../components/TbccNews'
 export default {
-  components: { DownloadApp, EcosystemBlock, OurMission, MainScreen, PriceOverview }
+  components: { TbccNews, FaqBlock, DownloadApp, EcosystemBlock, OurMission, MainScreen, PriceOverview }
 }
 </script>
 
@@ -76,10 +82,23 @@ export default {
   }
 }
 
-.price-overview-wrap {
+.price-overview-and-faq {
   overflow: visible;
   background-color: #051345;
   padding-bottom: 140px;
+}
 
+.price-overview-wrap {
+  padding-bottom: 140px;
+}
+
+.faq-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.tbcc-news-wrap {
+  background: #051345;
+  padding-bottom: 160px;
 }
 </style>

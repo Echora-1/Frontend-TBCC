@@ -15,7 +15,6 @@ export default {
 <style lang='scss' scoped>
 .price-overview {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
   align-items: center;
   position: relative;
@@ -29,8 +28,8 @@ export default {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    top: 230px;
-    right: -150px;
+    top: 220px;
+    right: -120px;
     position: absolute;
     pointer-events: none;
     z-index: -1;

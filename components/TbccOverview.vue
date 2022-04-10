@@ -206,5 +206,11 @@ export default {
   &::before {
     background: #A8B8CE;
   }
+
+  &:hover {
+    &::before {
+      background: #8d9bad;
+    }
+  }
 }
 </style>
