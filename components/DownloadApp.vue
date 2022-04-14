@@ -4,13 +4,13 @@
       <div class='img__wrap'>
         <div class='img__info info'>
           <div>
-            <p class='info__price'>0.130324</p>
-            <p class='info__percent-change'>$ 0.1356 &nbsp; <span>+2.72%</span></p>
+            <p class='info__price'>{{ price }}</p>
+            <p class='info__percent-change'>$ {{ price }} &nbsp; <span>{{ percentChange }}%</span></p>
           </div>
           <div class='info__volume'>
-            <p>24h Vol: <span>620,012.39</span></p>
-            <p>High Price: <span>0.138</span></p>
-            <p>Low Price: <span>0.1314</span></p>
+            <p>Vol: <span>{{ vol24h }}</span></p>
+            <p>High Price: <span>{{ highPrice }}</span></p>
+            <p>Low Price: <span>{{ lowPrice }}</span></p>
           </div>
         </div>
         <img src='img/app.png' width='282' height='573' alt=''>
@@ -34,11 +34,22 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import BaseButton from './BaseButton'
 import IconAndroid from './icon/IconAndroid'
 import IconIos from './icon/IconIos'
 export default {
-  components: { IconIos, IconAndroid, BaseButton }
+  components: { IconIos, IconAndroid, BaseButton },
+
+  computed: {
+    ...mapGetters({
+      price: 'getPrice',
+      percentChange: 'getPercentChange',
+      vol24h: 'getVol24h',
+      highPrice: 'getHighPrice',
+      lowPrice: 'getLowPrice'
+    })
+  }
 }
 </script>
 

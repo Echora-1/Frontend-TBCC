@@ -47,11 +47,11 @@ export default {
       selectedIndex: 0,
       accessibleContent: [
         {
-          title: 'test',
+          title: 'EXCHANGE',
           text: 'TBCC provides the ability to pay for goods and services with tokens.'
         },
         {
-          title: 'test',
+          title: 'WALLET',
           text: 'TBCC provides the ability to pay for goods and services with tokens.'
         }
       ],

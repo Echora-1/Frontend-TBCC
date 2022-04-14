@@ -22,8 +22,6 @@ export default {
 
 <style lang='scss' scoped>
 .our-mission {
-  overflow: hidden;
-
   &__container {
     display: flex;
     align-items: center;

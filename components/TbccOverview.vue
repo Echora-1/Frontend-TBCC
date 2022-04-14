@@ -4,10 +4,10 @@
       <tbcc-tabs />
     </div>
     <div class='overview__info info'>
-      <p class='info__price'>$0.2504 <span class='info__change'>5.43%</span></p>
+      <p class='info__price'>${{ price }} <span class='info__change'>{{ percentChange }}%</span></p>
       <div class='info__min-max'>
-        <p>Low: <span>$0.2503</span></p>
-        <p>High: <span>$0.327</span></p>
+        <p>Low: <span>${{ lowPrice }}</span></p>
+        <p>High: <span>${{ highPrice }}</span></p>
       </div>
       <div class='info__address'>
         <p id='content-holder'>0xf29480344d8e21efeab7fde39f8d8299056a7fea</p>
@@ -31,12 +31,22 @@
 
 
 <script>
+import { mapGetters } from 'vuex'
 import TbccTabs from "./TbccTabs"
 import CopyButton from "./CopyButton"
 import BaseButton from './BaseButton'
 import IconCoinMarketCap from './icon/IconCoinMarketCap'
 export default {
   components: { IconCoinMarketCap, BaseButton, CopyButton, TbccTabs },
+
+  computed: {
+    ...mapGetters({
+      price: 'getPrice',
+      percentChange: 'getPercentChange',
+      highPrice: 'getHighPrice',
+      lowPrice: 'getLowPrice'
+    })
+  },
 
   mounted() {
     const button = document.getElementById("copy-button");

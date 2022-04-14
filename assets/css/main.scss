@@ -3,6 +3,7 @@
 }
 
 body {
+  background: #051345;
   color: #242424;
   font-family: 'Roboto', sans-serif;
 }
@@ -76,18 +77,19 @@ a {
   }
 
   .flickity-page-dots .dot {
-    width: 6px;
-    height: 6px;
+    width: 12px;
+    height: 12px;
     opacity: 1;
     background: #162C50;
-    border: 2px solid transparent;
+    border: 6px solid transparent;
     transition: all 0.2s;
   }
 
   .flickity-page-dots .dot.is-selected {
     background: #4B66C7;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
+    border: 6px solid transparent;
   }
 }
 

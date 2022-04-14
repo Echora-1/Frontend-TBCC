@@ -32,10 +32,9 @@ import BaseButton from './BaseButton'
 import BaseDropdown from './BaseDropdown'
 export default {
   components: { BaseDropdown, BaseButton, IconLogo },
-
   data() {
     return {
-      languages: [ { language: 'EN', id: 1, value: 'en' }, { language: 'RU', id: 2, value: 'ru' }],
+      languages: [ { language: 'En', id: 1, value: 'en' }, { language: 'Ch', id: 2, value: 'ch' }, { language: 'Tur', id: 3, value: 'tur' }],
       currentLanguage: 'en',
     }
   },

@@ -2,7 +2,7 @@
   <div class='faq container'>
     <div class='faq__img img'>
       <learn-to-trade />
-      <div class='img__content'>
+      <div>
         <p class='base-title'>Learn to trade efficiently</p>
         <p class='img__text'>Get up to speed on TBCC with articles, guidesm and step-by-step tutorials</p>
         <nuxt-link to='/' class='arrow-link'>learn more</nuxt-link>
@@ -77,22 +77,6 @@ export default {
 }
 
 .img {
-  &__content {
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 373px;
-      height: 373px;
-      background-image: url("./assets/img/bg-learn-to-trade.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      left: -85px;
-      top: 14px;
-      pointer-events: none;
-    }
-  }
-
   &__text {
     max-width: 400px;
     font-size: 18px;

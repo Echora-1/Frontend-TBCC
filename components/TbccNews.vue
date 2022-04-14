@@ -2,25 +2,19 @@
   <div class='tbcc-news container'>
     <p class='base-title'>TBCC news</p>
     <div class='tbcc-news__list'>
-      <flickity id='news-carousel' ref="flickity" :options="flickityOptions">
-        <news-item
-          v-for='(item, index) in newsItems'
-          :img='item.img'
-          :title='item.title'
-          :link='item.link'
-          :key='index'
-          class='tbcc-news__item'
-        />
-      </flickity>
+      <client-only>
+        <Flickity id='news-carousel' ref="flickity" :options="flickityOptions">
+          <news-item v-for='(item, index) in newsItems' :key='index' :img='item.img' :title='item.title' :link='item.link' class='tbcc-news__item' />
+        </Flickity>
+      </client-only>
     </div>
   </div>
 </template>
 
 <script>
-import Flickity from 'vue-flickity';
-import NewsItem from './NewsItem'
+import NewsItem from './NewsItem';
 export default  {
-  components: { NewsItem, Flickity },
+  components: { NewsItem },
   data() {
     return {
       flickityOptions: {

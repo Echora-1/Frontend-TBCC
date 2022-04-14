@@ -17,7 +17,7 @@
          <main-screen-img/>
       </div>
     </div>
-    <advantage-list class='container' />
+    <advantage-list class='main-screen__advantage-list container' />
   </div>
 </template>
 
@@ -34,7 +34,6 @@ export default {
 .main-screen {
   padding-top: 110px;
   background: linear-gradient(161.68deg, #1F0C71 27.28%, #041344 67.8%);
-  overflow: hidden;
   padding-bottom: 35px;
 
   &__container {
@@ -80,6 +79,8 @@ export default {
 
   &__advantage-list {
     width: 100%;
+    position: relative;
+    z-index: 3;
   }
 }
 
@@ -90,6 +91,21 @@ export default {
     font-weight: 700;
     font-size: 60px;
     margin: 0 0 30px;
+    position: relative;
+
+    &::after {
+      content: "";
+      min-width: 489px;
+      min-height: 584px;
+      background-image: url("assets/img/bg-star-main-screen.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      top: -160px;
+      left: -230px;
+      position: absolute;
+      pointer-events: none;
+    }
   }
 
   &__description {
