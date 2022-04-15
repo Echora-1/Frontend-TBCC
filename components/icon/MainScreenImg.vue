@@ -1054,7 +1054,7 @@
 import { gsap } from "gsap";
 export default {
   mounted() {
-    const main = gsap.timeline();
+    const main = gsap.timeline({delay: 1});
     main.to('.pers',{x: 0, y: 0, duration:2} )
     main.to('.cube', {scaleX: 1, scaleY: 1, duration:2, stagger: .5, ease: "back.out(1.7)",}, "-=1" )
     main.to('.star', { opacity: 1, duration: 2}, "-=2" )

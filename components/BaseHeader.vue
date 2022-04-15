@@ -96,9 +96,8 @@ export default {
 
     setStyleTopNavigation() {
       if(window.innerWidth < 1024) {
-        const baseHeaderHeight = document.querySelector('.base-header__container').clientHeight;
         const vh100 = document.documentElement.clientHeight
-        document.querySelector('.base-header__nav').style.bottom = `-${vh100 - baseHeaderHeight}px`;
+        document.querySelector('.base-header__nav').style.bottom = `-${vh100 - 65}px`;
       }
     }
   }
