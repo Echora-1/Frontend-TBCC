@@ -52,19 +52,16 @@ export default {
         document.body.style.overflow = 'hidden'
       } else  {
         document.body.style.overflow = 'visible'
-        this.scrollHeader();
       }
     }
   },
 
   mounted() {
     window.addEventListener('scroll', this.scrollHeader)
-    window.addEventListener('resize', this.setStyleTopNavigation);
-    this.setStyleTopNavigation();
   },
 
   destroy() {
-    window.removeEventListener('resize', this.setStyleTopNavigation);
+    window.removeEventListener('scroll', this.scrollHeader);
   },
 
   methods: {
@@ -93,13 +90,6 @@ export default {
     toggleShowMenu() {
       this.isShowMenu = !this.isShowMenu;
     },
-
-    setStyleTopNavigation() {
-      if(window.innerWidth < 1024) {
-        const vh100 = document.documentElement.clientHeight
-        document.querySelector('.base-header__nav').style.bottom = `-${vh100 - 65}px`;
-      }
-    }
   }
 }
 </script>
@@ -170,7 +160,7 @@ nav {
       flex-direction: column;
       left: 0;
       right: 0;
-      bottom: 0;
+      bottom: calc(65px - 100vh);
       background: linear-gradient(90deg,rgba(7,20,40,.9) 0,#041344 100%);
       padding: 15px 26px 20px;
       height: calc(100vh - 65px);
