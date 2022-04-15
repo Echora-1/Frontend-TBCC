@@ -37,6 +37,7 @@ export default {
   &__img {
     svg {
       width: 100%;
+      height: 100%;
       object-fit: cover;
       position: relative;
       top: -20px;
@@ -44,6 +45,7 @@ export default {
 
       @media (min-width: 1200px) {
         width: auto;
+        height: auto;
         left: -90px;
       }
     }

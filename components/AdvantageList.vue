@@ -28,13 +28,24 @@ export default {
 .advantage-list {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  flex-direction: column;
+
+  @media(min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-width: 120px;
+
+    &:not(:last-child) {
+      @media(max-width: 767px) {
+        margin-bottom: 55px;
+      }
+    }
 
     p {
       margin-top: 22px;

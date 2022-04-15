@@ -70,32 +70,20 @@ export default {
   position: relative;
   z-index: 1;
 
-  &::before {
-    content: "";
-    width: 1497px;
-    height: 915px;
-    background-image: url("assets/img/bg-main-screen.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    top: 0;
-    right: 0;
-    position: absolute;
-    pointer-events: none;
-  }
-
-  &::after {
-    content: "";
-    width: 314px;
-    height: 394px;
-    background-image: url("assets/img/bg-planet.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    top: 620px;
-    left: 0;
-    position: absolute;
-    pointer-events: none;
-    z-index: 2;
+  @media (min-width: 768px) {
+    &::before {
+      content: "";
+      width: 1497px;
+      height: 915px;
+      background-image: url("assets/img/bg-main-screen.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      top: 0;
+      right: 0;
+      position: absolute;
+      pointer-events: none;
+    }
   }
 }
 

@@ -18,7 +18,7 @@ export default {
 <style lang="scss" scoped>
 button {
   background-color: #1B0D6A;
-  padding: 20px 40px;
+  padding: 15px 30px;
   border-radius: 30px;
   color: #fff;
   display: inline-flex;
@@ -29,6 +29,13 @@ button {
   line-height: 16px;
   position: relative;
   border: none;
+
+  @media (min-width: 1200px) {
+    padding: 20px 40px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
   &:hover {
     &::before {
       background: linear-gradient(77.9deg,#06f -3.83%,#2ce0c5 72.3%);
