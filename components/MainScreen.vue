@@ -127,9 +127,12 @@ export default {
     position: relative;
     z-index: 3;
     padding-top: 57px;
+    padding-left: 6px;
 
     @media (min-width: 768px) {
       padding-top: 70px;
+      padding-left: 0;
+
 
       &::after {
         content: "";
