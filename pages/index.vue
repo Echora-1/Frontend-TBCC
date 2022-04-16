@@ -3,7 +3,7 @@
     <div class='main-screen-wrap'>
       <main-screen />
       <div class='our-mission-and-ecosystem'>
-        <our-mission />
+        <our-mission class='our-mission-wrap' />
         <ecosystem-block />
       </div>
     </div>
@@ -94,19 +94,29 @@ export default {
   padding-bottom: 100px;
   z-index: 1;
 
-  &::before {
-    content: "";
-    width: 1145px;
-    height: 822px;
-    background-image: url("assets/img/bg-our-mission.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    top: 340px;
-    right: 0;
-    position: absolute;
-    pointer-events: none;
-    z-index: -1;
+  @media (min-width: 768px) {
+    &::before {
+      content: "";
+      width: 1145px;
+      height: 822px;
+      background-image: url("assets/img/bg-our-mission.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      top: 340px;
+      right: 0;
+      position: absolute;
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
+}
+
+.our-mission-wrap {
+  padding-bottom: 110px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 0;
   }
 }
 

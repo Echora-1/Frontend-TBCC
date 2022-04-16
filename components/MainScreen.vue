@@ -35,7 +35,6 @@ export default {
 <style lang='scss' scoped>
 .main-screen {
   background: linear-gradient(161.68deg, #1F0C71 27.28%, #041344 67.8%);
-  padding-bottom: 35px;
 
   @media (min-width: 768px) {
     padding-top: 65px;

@@ -26,34 +26,57 @@ export default {
     display: flex;
     align-items: center;
     margin-top: 25px;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
   }
 
   &__img,
   &__content {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 100%;
+    max-width: 100%;
+
+    @media (min-width: 768px) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
   }
 
   &__img {
     svg {
       width: 100%;
       height: 100%;
+      max-width: 576px;
+      max-height: 606px;
       object-fit: cover;
       position: relative;
       top: -20px;
       left: 0;
 
+      @media (min-width: 768px) {
+        transform: scale(1.2);
+        left: -20px;
+        max-width: unset;
+        max-height: unset;
+      }
+
       @media (min-width: 1200px) {
         width: auto;
         height: auto;
         left: -90px;
+        transform: none;
       }
     }
   }
 
   &__content {
-    max-width: 460px;
-    padding-bottom: 20px;
+    max-width: 480px;
+
+    @media (min-width: 768px) {
+      padding-bottom: 20px;
+    }
 
     @media (min-width: 1200px) {
       padding-left: 45px;
@@ -62,18 +85,46 @@ export default {
 }
 
 .content {
+  margin-top: -70px;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
+
   &__title {
     font-weight: 700;
-    font-size: 48px;
-    margin: 0 0 35px;
+    font-size: 36px;
+    margin: 0 0 25px;
+
+    @media (min-width: 1024px) {
+      font-size: 45px;
+      margin: 0 0 35px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 48px;
+    }
   }
 
   &__text {
     color: #6983AB;
     font-weight: 300;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 24px;
     margin: 0;
+    max-width: 317px;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+      line-height: 26px;
+      max-width: 460px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 18px;
+      line-height: 28px;
+      max-width: 480px;
+    }
   }
 }
 </style>
