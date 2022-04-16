@@ -81,22 +81,37 @@ export default {
 <style lang="scss" scoped>
 
 .tabs {
-  padding-right: 20px;
+  @media (min-width: 768px) {
+    padding-right: 20px;
+  }
 }
 
 ul.tabs__header {
   display: flex;
   list-style: none;
   margin: 0;
-  padding: 0 0 40px;
+  padding: 0 0 363px;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+
+  @media (min-width: 768px) {
+    z-index: 0;
+    position: static;
+    padding: 0 0 40px;
+    justify-content: flex-start;
+  }
 }
 
 ul.tabs__header > li {
-  padding: 17px 40px;
+  padding: 17px 0;
   margin: 0;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
+  width: 50%;
+  max-width: 200px;
 
   & > svg {
     margin-right: 8px;
@@ -135,6 +150,12 @@ ul.tabs__header > li {
 }
 
 .tab {
+  max-width: 335px;
+
+  @media (min-width: 768px) {
+    max-width: unset;
+  }
+
   &__content {
     &:not(:last-child) {
       padding-bottom: 24px;

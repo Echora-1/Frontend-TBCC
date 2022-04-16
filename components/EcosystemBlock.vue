@@ -34,20 +34,41 @@ export default {
   }
 
   &__title {
-    margin: 0 auto 30px;
+    margin: 0 auto 25px;
     max-width: 250px;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 36px;
+
+    @media (min-width: 1024px) {
+      margin: 0 auto 30px;
+      font-size: 45px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 48px;
+    }
   }
 
   &__subtitle {
     margin: 0 auto;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 28px;
     color: #6983AB;
     text-align: center;
-    max-width: 700px;
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 320px;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+      line-height: 26px;
+      max-width: 600px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 18px;
+      line-height: 28px;
+      max-width: 700px;
+    }
   }
 }
 
@@ -55,30 +76,80 @@ export default {
   display: flex;
   width: 100%;
   overflow: hidden;
-  transform: translateX(20px);
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    transform: translateX(20px);
+  }
 
   &__tabs,
   &__cube {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 100%;
+    max-width: 100%;
+
+    @media (min-width: 768px) {
+      flex: 0 0 50%;
+      max-width: 50%;
+      align-self: flex-start;
+    }
   }
 
   &__tabs {
-    padding-top: 120px;
+    padding-top: 35px;
+
+    @media (min-width: 1024px) {
+      padding-top: 120px;
+    }
   }
 }
 
 .cube {
   display: flex;
   justify-content: center;
-  overflow: visible;
+  align-items: flex-start;
+  position: absolute;
+  top: 140px;
+  z-index: 1;
+
+  @media (min-width: 768px) {
+    position: static;
+    top: auto;
+  }
 
   &__wrap {
     position: relative;
-    overflow: visible;
+    overflow: hidden;
     display: flex;
     align-items: center;
     top: -50px;
+  }
+
+  &__item {
+    width: 100%;
+    height: 100%;
+    max-width: 320px;
+    max-height: 430px;
+    position: relative;
+    top: -72px;
+    overflow: visible;
+
+    @media (min-width: 768px) {
+      max-width: 450px;
+      max-height: 605px;
+      top: -20px;
+    }
+
+    @media (min-width: 1024px) {
+    }
+
+    @media (min-width: 1200px) {
+      top: 0;
+      width: unset;
+      height: unset;
+    }
   }
 }
 
