@@ -91,7 +91,6 @@ export default {
   overflow: visible;
   background: #051345;
   position: relative;
-  padding-bottom: 70px;
   z-index: 1;
 
   @media (min-width: 768px) {

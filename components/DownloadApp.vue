@@ -13,7 +13,10 @@
             <p>Low Price: <span>{{ lowPrice }}</span></p>
           </div>
         </div>
-        <img src='img/app.png' width='282' height='573' alt=''>
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/app.png" width='282' height='573'>
+          <img src="img/app-mobile.png" width='375' height='390'>
+        </picture>
       </div>
     </div>
     <div class='download-app__content content'>
@@ -78,22 +81,20 @@ export default {
 .img {
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 695px;
-    height: 741px;
-    background-image: url("../assets/img/bg-app.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    left: 50%;
-    transform: translateX(-50%) scale(0.8);
-    top: -100px;
-    z-index: -1;
-    pointer-events: none;
-
     @media (min-width: 768px) {
-      transform: translateX(-50%);
+      &::before {
+        content: "";
+        position: absolute;
+        width: 695px;
+        height: 741px;
+        background-image: url("../assets/img/bg-app.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        left: 50%;
+        transform: translateX(-50%) scale(0.8);
+        top: -100px;
+        z-index: -1;
+        pointer-events: none;
     }
   }
 
@@ -102,45 +103,45 @@ export default {
   }
 
   &__wrap {
-    width: 282px;
-    height: 410px;
-    margin: 0 auto;
+    max-width: 375px;
+    width: 100%;
+    height: 100%;
+    min-height: 390px;
+    margin: 0 auto 24px;
     position: relative;
     z-index: 1;
-    transform: scale(0.8);
     overflow: hidden;
-    border-radius: 0 0 40px 40px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 390px;
-      height: 289px;
-      background: transparent;
-      border-radius: 0 0 50% 50%;
-      border-bottom: 90px solid #062156;
-      top: 117px;
-      left: 50%;
-      transform: translateX(-50%);
-      pointer-events: none;
-
-    }
 
     @media (min-width: 768px) {
+      width: 282px;
       height: 573px;
-      transform: none;
-      border-radius: unset;
+      max-width: unset;
+      min-height: unset;
+      margin: 0 auto;
+    }
 
-      &::after {
-        display: none;
+    img {
+      @media (max-width: 767px) {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
   }
 
   &__info {
     position: absolute;
-    top: 66px;
-    left: 21px;
+    top: 138px;
+    left: 49%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    @media (min-width: 768px) {
+      top: 66px;
+      left: 21px;
+      transform: unset;
+    }
   }
 }
 
@@ -148,10 +149,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -20px;
 
   @media (min-width: 768px) {
-    margin-top: 0;
     display: block;
   }
 
@@ -240,21 +239,36 @@ export default {
 .info {
   display: flex;
   justify-content: space-between;
-  width: 240px;
+  width: 168px;
+
+  @media (min-width: 768px) {
+    width: 240px;
+  }
 
   &__price {
     font-weight: 600;
-    font-size: 21px;
+    font-size: 16px;
     letter-spacing: -0.2px;
     margin-bottom: 6px;
     color: #2B303E;
+    margin-top: 23px;
+
+
+    @media (min-width: 768px) {
+      margin-top: 16px;
+      font-size: 21px;
+    }
   }
 
   &__percent-change {
     margin: 0;
-    font-size: 10px;
+    font-size: 8px;
     letter-spacing: -0.2px;
     color: #9B9DAD;
+
+    @media (min-width: 768px) {
+      font-size: 10px;
+    }
 
     span {
       color: #7BAEA1;
@@ -262,15 +276,26 @@ export default {
   }
 
   &__volume {
-    margin-top: 23px;
-    width: 110px;
+    margin-top: 25px;
+    width: 80px;
+
+    @media (min-width: 768px) {
+      margin-top: 23px;
+      width: 110px;
+    }
+
     p {
-      font-size: 10px;
+      font-size: 8px;
       letter-spacing: -0.2px;
       color: #9B9DAD;
       display: flex;
       justify-content: space-between;
-      margin: 0 0 6px;
+      margin: 0 0 4px;
+
+      @media (min-width: 768px) {
+        font-size: 10px;
+        margin: 0 0 6px;
+      }
     }
 
     span {
