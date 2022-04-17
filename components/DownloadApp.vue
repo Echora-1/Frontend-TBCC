@@ -111,6 +111,7 @@ export default {
     position: relative;
     z-index: 1;
     overflow: hidden;
+    right: -3px;
 
     @media (min-width: 768px) {
       width: 282px;
@@ -118,6 +119,7 @@ export default {
       max-width: unset;
       min-height: unset;
       margin: 0 auto;
+      right: auto;
     }
 
     img {
@@ -126,6 +128,11 @@ export default {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
+      }
+
+      @media (min-width: 768px) {
+        width: 282px;
+        height: 573px;
       }
     }
   }
@@ -255,7 +262,7 @@ export default {
 
 
     @media (min-width: 768px) {
-      margin-top: 16px;
+      margin-top: 18px;
       font-size: 21px;
     }
   }
