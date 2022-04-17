@@ -70,7 +70,7 @@ export default {
   position: relative;
   z-index: 1;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     &::before {
       content: "";
       width: 1497px;
@@ -91,10 +91,14 @@ export default {
   overflow: visible;
   background: #051345;
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 70px;
   z-index: 1;
 
   @media (min-width: 768px) {
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: 1024px) {
     &::before {
       content: "";
       width: 1145px;
@@ -127,36 +131,37 @@ export default {
   z-index: 1;
   padding-bottom: 160px;
 
-  &::before {
-    content: "";
-    width: 1414px;
-    height: 1016px;
-    background-image: url("assets/img/bg-app-and-price.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    top: -230px;
-    left: 0;
-    position: absolute;
-    pointer-events: none;
-    z-index: -1;
-  }
 
-  &::after {
-    content: "";
-    width: 1798px;
-    height: 715px;
-    background-image: url("assets/img/stones.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    bottom: -100px;
-    right: 0;
-    position: absolute;
-    pointer-events: none;
-    z-index: -1;
+  @media (min-width: 1024px) {
+    &::before {
+      content: "";
+      width: 1414px;
+      height: 1016px;
+      background-image: url("assets/img/bg-app-and-price.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      top: -230px;
+      left: 0;
+      position: absolute;
+      pointer-events: none;
+      z-index: -1;
+    }
 
-
+    &::after {
+      content: "";
+      width: 1798px;
+      height: 715px;
+      background-image: url("assets/img/stones.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      bottom: -100px;
+      right: 0;
+      position: absolute;
+      pointer-events: none;
+      z-index: -1;
+    }
   }
 }
 
