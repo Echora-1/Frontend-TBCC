@@ -21,11 +21,14 @@
 </template>
 
 
-<style scoped>
+<style lang='scss' scoped>
 svg {
-  max-width: 508px;
-  max-height: 272px;
   width: 100%;
   height: 100%;
+
+  @media (min-width: 1024px) {
+    max-width: 508px;
+    max-height: 272px;
+  }
 }
 </style>

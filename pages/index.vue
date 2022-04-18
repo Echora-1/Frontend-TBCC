@@ -128,7 +128,11 @@ export default {
   background-color: #051345;
   position: relative;
   z-index: 1;
-  padding-bottom: 160px;
+  padding-bottom: 85px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 160px;
+  }
 
 
   @media (min-width: 1024px) {
@@ -167,11 +171,19 @@ export default {
 .price-overview-and-faq {
   overflow: visible;
   background-color: #051345;
-  padding-bottom: 140px;
+  padding-bottom: 60px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 140px;
+  }
 }
 
 .price-overview-wrap {
-  padding-bottom: 140px;
+  padding-bottom: 78px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 140px;
+  }
 }
 
 .faq-wrap {

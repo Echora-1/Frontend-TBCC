@@ -20,25 +20,36 @@ export default {
   position: relative;
   z-index: 1;
 
-  &::before {
-    content: "";
-    min-width: 1440px;
-    min-height: 1200px;
-    background-image: url("assets/img/bg-price-overview.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    top: 220px;
-    right: -120px;
-    position: absolute;
-    pointer-events: none;
-    z-index: -1;
+  @media (min-width: 1024px) {
+    &::before {
+      content: "";
+      min-width: 1440px;
+      min-height: 1200px;
+      background-image: url("assets/img/bg-price-overview.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      top: 220px;
+      right: -120px;
+      position: absolute;
+      pointer-events: none;
+      z-index: -1;
+    }
   }
 }
 
 .base-title {
   font-weight: 700;
-  font-size: 48px;
-  margin: 0 0 45px;
+  font-size: 36px;
+  margin: 0 0 40px;
+
+  @media (min-width: 1024px) {
+    font-size: 45px;
+    margin: 0 0 45px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 48px;
+  }
 }
 </style>

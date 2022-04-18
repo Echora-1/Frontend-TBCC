@@ -26,16 +26,25 @@ export default {
 .faq-item {
   display: flex;
   align-items: center;
-  padding-top: 17px;
-  padding-bottom: 20px;
+  padding: 20px 0;
   border-bottom: 1px solid #18265B;
   cursor: pointer;
+
+  @media (max-width: 767px) {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 15px 0;
+  }
 
   &__img {
     width: 64px;
     height: 64px;
     background: linear-gradient(180deg, #2E3F87 0%, rgba(31, 46, 111, 0) 100%);
-    border-radius: 24px;
+    border-radius: 18px;
+
+    @media (max-width: 767px) {
+      transform: scale(0.75);
+    }
 
     display: flex;
     align-items: center;
@@ -45,8 +54,8 @@ export default {
   p {
     padding-left: 30px;
     font-weight: 400;
-    font-size: 22px;
-    line-height: 27px;
+    font-size: 18px;
+    line-height: 22px;
     color: #FFFFFF;
     opacity: 0.6;
     display: inline-block;
@@ -56,7 +65,12 @@ export default {
     background-position: center right;
     background-repeat: no-repeat;
     transition: opacity 0.3s;
+    margin: 10px 0 10px;
 
+    @media (min-width: 768px) {
+      font-size: 22px;
+      line-height: 27px;
+    }
   }
 
   &:hover {

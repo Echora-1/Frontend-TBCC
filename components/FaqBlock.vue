@@ -2,7 +2,7 @@
   <div class='faq container'>
     <div class='faq__img img'>
       <learn-to-trade />
-      <div>
+      <div class='img__content'>
         <p class='base-title'>Learn to trade efficiently</p>
         <p class='img__text'>Get up to speed on TBCC with articles, guidesm and step-by-step tutorials</p>
         <nuxt-link to='/' class='arrow-link'>learn more</nuxt-link>
@@ -47,14 +47,31 @@ export default {
 <style lang='scss' scoped>
 .faq {
   display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 
   &__img,
   &__list {
-    width: 50%;
-    max-width: 50%;
+    width: 100%;
+    max-width: 100%;
+
+    @media (min-width: 768px) {
+      width: 50%;
+      max-width: 50%;
+    }
   }
 
   &__img {
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+
     & > svg {
       max-width: 430px;
       max-height: 273px;
@@ -64,25 +81,65 @@ export default {
   }
 
   &__list {
-    padding-left: 20px;
-    padding-top: 15px;
+    @media (min-width: 768px) {
+      padding-left: 20px;
+      padding-top: 15px;
+    }
   }
 }
 
 .base-title {
   font-weight: 700;
-  font-size: 32px;
-  line-height: 40px;
-  margin: 0 0 35px;
+  margin: 0 0 30px;
+  font-size: 28px;
+  line-height: 35px;
+  text-align: center;
+
+
+  @media (min-width: 768px) {
+    text-align: unset;
+    margin: 0 0 35px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 
 .img {
   &__text {
-    max-width: 400px;
-    font-size: 18px;
-    line-height: 28px;
+    max-width: 320px;
+    font-size: 16px;
+    line-height: 24px;
     color: #6983AB;
-    margin: 0 0 35px;
+    margin: 0 0 30px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      text-align: unset;
+      margin: 0 0 35px;
+      max-width: 400px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  &__content {
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.arrow-link {
+  @media (max-width: 767px) {
+    margin-bottom: 20px;
   }
 }
 </style>

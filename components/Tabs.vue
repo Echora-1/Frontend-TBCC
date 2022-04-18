@@ -48,29 +48,50 @@ export default {
 .tabs {
   &__header-wrap {
     display: flex;
-    align-items: baseline;
     justify-content: space-between;
-    padding-bottom: 18px;
+    padding-bottom: 16px;
     border-bottom: 1px solid #E0E0E0;
-    margin-bottom: 38px;
+    margin-bottom: 30px;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      align-items: baseline;
+      padding-bottom: 18px;
+      margin-bottom: 38px;
+    }
   }
 
   &__title {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 20px;
     line-height: 24px;
     color: #2B2B2B;
-    margin: 0;
+    margin: 0 0 30px;
+
+    @media (min-width: 1024px) {
+      margin: 0;
+    }
   }
 
   &__header {
-    display: block;
+    display: flex;
     list-style: none;
-    margin: 0 0 0 20px;
     padding: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+
+    @media (min-width: 1024px) {
+      display: block;
+      width: auto;
+      margin: 0 0 0 20px;
+    }
 
     li {
-      padding: 10px 12px;
+      padding: 10px 17px;
       border-radius: 16px;
       margin: 0;
       display: inline-block;
@@ -80,6 +101,10 @@ export default {
       line-height: 16px;
       border: 2px solid transparent;
       color: #6983AB;
+
+      @media (min-width: 1024px) {
+        padding: 10px 12px;
+      }
     }
   }
 }

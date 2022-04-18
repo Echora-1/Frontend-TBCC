@@ -51,10 +51,15 @@ export default {
 
   p {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 29px;
     color: #FFFFFF;
     margin: 0 0 30px;
+    min-height: 58px;
+
+    @media (min-width: 1024px) {
+      font-size: 24px;
+    }
   }
 }
 </style>

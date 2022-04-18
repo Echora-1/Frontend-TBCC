@@ -11,7 +11,7 @@
       </div>
       <div class='info__address'>
         <p id='content-holder'>0xf29480344d8e21efeab7fde39f8d8299056a7fea</p>
-        <p>Binance Smart Chain (BEP20): &nbsp; <span>0xf294...6a7fea</span>&nbsp;<copy-button id='copy-button'/></p>
+        <p>Binance Smart Chain (BEP20): &nbsp; <span>0xf2...7fea</span>&nbsp;<copy-button id='copy-button'/></p>
       </div>
       <div class='info__actions'>
         <base-button>
@@ -70,21 +70,44 @@ export default {
 .overview {
   width: 100%;
   background: linear-gradient(180deg, #FFFFFF 0%, #D0D8F3 100%);
-  border-radius: 36px;
+  border-radius: 16px;
   min-height: 490px;
-  padding: 55px 48px;
+  padding: 36px 16px;
   display: flex;
+  flex-direction: column;
+  max-width: 485px;
+
+  @media (min-width: 768px) {
+    padding: 36px 30px;
+    max-width: 715px;
+  }
+
+  @media (min-width: 1024px) {
+    border-radius: 36px;
+    flex-direction: row;
+    padding: 55px 48px;
+    max-width: unset;
+  }
 
   &__graph,
   &__info {
-    width: 50%;
-    max-width: 50%;
+    width: 100%;
+    max-width: 100%;
+
+    @media (min-width: 1024px) {
+      width: 50%;
+      max-width: 50%;
+    }
   }
 }
 
 .info {
-  padding-top: 35px;
-  padding-left: 50px;
+  padding-top: 56px;
+
+  @media (min-width: 1024px) {
+    padding-top: 35px;
+    padding-left: 50px;
+  }
 
   &__price {
     font-weight: 700;
@@ -94,7 +117,11 @@ export default {
     display: inline-flex;
     align-items: center;
     letter-spacing: -0.2px;
-    margin: 0 0 40px;
+    margin: 0 0 30px;
+
+    @media (min-width: 1024px) {
+      margin: 0 0 40px;
+    }
   }
 
   &__change {
@@ -111,14 +138,23 @@ export default {
 
   &__min-max {
     display: flex;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 35px;
+    }
 
     p {
       font-weight: 400;
-      font-size: 20px;
-      line-height: 24px;
+      font-size: 16px;
+      line-height: 19px;
       color: #6983AB;
       margin: 0;
+
+      @media (min-width: 768px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
 
       &:first-child {
         margin-right: 27px;
@@ -133,14 +169,23 @@ export default {
 
   &__address {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @media (min-width: 1024px) {
+      margin-bottom: 50px;
+    }
 
     p {
       font-weight: 400;
-      font-size: 20px;
-      line-height: 24px;
+      font-size: 16px;
+      line-height: 19px;
       color: #6983AB;
       margin: 0;
+
+      @media (min-width: 768px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
     }
 
     span {
@@ -151,7 +196,19 @@ export default {
   &__actions {
     position: relative;
     z-index: 1;
-    margin-bottom: 55px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: 55px;
+    }
+
 
     button {
       background: #E2E7F8;
@@ -159,15 +216,25 @@ export default {
       font-weight: 600;
       font-size: 16px;
       line-height: 16px;
+      min-width: 318px;
+      justify-content: center;
+
+      @media (min-width: 768px) {
+        min-width: unset;
+      }
 
       &:first-child {
-        margin-right: 20px;
+        margin-bottom: 25px;
+
+        @media (min-width: 768px) {
+          margin-bottom: 0;
+          margin-right: 20px;
+        }
       }
     }
   }
 
   &__copyright {
-    margin: 0;
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
@@ -175,6 +242,14 @@ export default {
     opacity: 0.35;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+
+    @media (min-width: 768px) {
+      width: unset;
+      justify-content: flex-start;
+    }
 
     svg {
       margin-left: 10px;
@@ -196,9 +271,13 @@ export default {
 }
 
 .meta-mask-button {
-  padding-left: 53px;
+  padding-left: 40px;
   padding-right: 20px;
   position: relative;
+
+  @media (min-width: 768px) {
+    padding-left: 53px;
+  }
 
   &::after {
     content: "";
@@ -208,9 +287,13 @@ export default {
     background-image: url("../assets/img/meta-mask.svg");
     background-position: center;
     background-repeat: no-repeat;
-    left: 20px;
+    left: 75px;
     top: 50%;
     transform: translateY(-50%);
+
+    @media (min-width: 768px) {
+      left: 20px;
+    }
   }
 
   &::before {
