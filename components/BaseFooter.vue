@@ -44,11 +44,29 @@
               </base-button>
             </div>
           </div>
+          <div class='base-footer__nav base-footer__nav-mobile'>
+            <a href='/'>Terms of use</a>
+            <a href='/'>Privacy policy</a>
+            <a href='/'>Risk disclousure</a>
+          </div>
         </div>
       </div>
     </div>
   </footer>
 </template>
+
+<script>
+import BaseButton from './BaseButton'
+import IconIos from './icon/IconIos'
+import IconAndroid from './icon/IconAndroid'
+import IconInstagram from './icon/IconInstagram'
+import IconTelegram from './icon/IconTelegram'
+import IconFacebook from './icon/IconFacebook'
+import IconTwitter from './icon/IconTwitter'
+export default {
+  components: { IconTwitter, IconFacebook, IconTelegram, IconInstagram, IconAndroid, IconIos, BaseButton }
+}
+</script>
 
 <style lang='scss' scoped>
 
@@ -58,10 +76,20 @@
   position: relative;
 
   &__container {
+    border-top: 2px solid #0E1B4E;
     border-bottom: 2px solid #0E1B4E;
-    padding: 50px 0;
     display: flex;
     position: relative;
+    flex-direction: column;
+    padding: 50px 0;
+    max-width: 320px;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      border-top: unset;
+      flex-direction: row;
+      max-width: unset;
+    }
 
     &::after {
       content: "TBCC © 2022";
@@ -78,24 +106,51 @@
 
   &__nav,
   &__actions {
-    width: 50%;
-    max-width: 50%;
+    width: 100%;
+    max-width: 100%;
+
+    @media (min-width: 768px) {
+      width: 50%;
+      max-width: 50%;
+    }
   }
 
   &__nav {
     ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 0;
       margin: 0;
       list-style: none;
-      -webkit-columns: 3;
-      -moz-columns: 3;
-      -moz-column-count: 3;
-      column-count: 3;
+
+      @media (min-width: 768px) {
+        display: block;
+        -webkit-columns: 3;
+        -moz-columns: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+      }
+
+      @media (max-width: 767px) {
+        max-width: 317px;
+        margin: 0 auto 20px;
+      }
     }
 
     li {
+      @media (max-width: 767px) {
+        margin-bottom: 40px;
+
+        &:nth-last-child(-n+2) {
+          display: none;
+        }
+      }
+
       &:not(:nth-child(3n)) {
-        margin-bottom: 30px;
+        @media (min-width: 768px) {
+          margin-bottom: 30px;
+        }
       }
     }
 
@@ -104,26 +159,70 @@
       font-size: 14px;
       line-height: 125%;
       color: #6983AB;
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__nav-mobile {
+    display: none;
+    @media (max-width: 767px) {
+      display: flex;
+      justify-content: space-around;
+      max-width: 345px;
+      padding-top: 50px;
+    }
+
+    a {
+      font-size: 14px;
     }
   }
 }
 
 .actions {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
 
   p {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 125%;
     color: #FFFFFF;
     margin: 0 0 25px;
+
+    @media (min-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  &__app,
+  &__community {
+    @media (max-width: 767px) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__app {
     button {
       background: #505E8C;
       padding: 12px 28px;
+
+      @media (max-width: 767px) {
+       min-width: 126px;
+        justify-content: center;
+      }
 
       &:first-child {
         margin-right: 14px;
@@ -137,8 +236,14 @@
   }
 
   &__community {
+    @media (max-width: 767px) {
+      margin-bottom: 40px;
+    }
+
     a:not(:last-child) {
-      margin-right: 37px;
+      @media (min-width: 768px) {
+        margin-right: 37px;
+      }
     }
   }
 
@@ -146,18 +251,12 @@
     display: flex;
     min-height: 42px;
     align-items: center;
+
+    @media (max-width: 767px) {
+      width: 272px;
+      justify-content: space-between;
+    }
   }
 }
+
 </style>
-<script>
-import BaseButton from './BaseButton'
-import IconIos from './icon/IconIos'
-import IconAndroid from './icon/IconAndroid'
-import IconInstagram from './icon/IconInstagram'
-import IconTelegram from './icon/IconTelegram'
-import IconFacebook from './icon/IconFacebook'
-import IconTwitter from './icon/IconTwitter'
-export default {
-  components: { IconTwitter, IconFacebook, IconTelegram, IconInstagram, IconAndroid, IconIos, BaseButton }
-}
-</script>

@@ -93,8 +93,27 @@ export default {
   position: relative;
   z-index: 1;
 
+  &::before {
+    content: "";
+    width: 768px;
+    height: 1201px;
+    background-image: url("assets/img/mobile-bg-ecosystem.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: 393px;
+    right: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+  }
+
   @media (min-width: 768px) {
     padding-bottom: 100px;
+
+    &::before {
+      display: none;
+    }
   }
 
   @media (min-width: 1024px) {
@@ -130,8 +149,28 @@ export default {
   z-index: 1;
   padding-bottom: 85px;
 
+  &::before {
+    content: "";
+    width: 768px;
+    height: 1201px;
+    background-image: url("assets/img/mobile-bg-ecosystem.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: 333px;
+    right: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+
   @media (min-width: 768px) {
     padding-bottom: 160px;
+
+    &::before {
+      display: none;
+    }
   }
 
 
@@ -193,7 +232,12 @@ export default {
 
 .tbcc-news-wrap {
   background: #051345;
-  padding-bottom: 160px;
+  padding-bottom: 80px;
+
+
+  @media (min-width: 768px) {
+    padding-bottom: 160px;
+  }
 }
 
 .partners-wrap {
@@ -202,37 +246,57 @@ export default {
   z-index: 1;
   margin-bottom: 10px;
 
-  &::before {
-    content: "";
-    width: 1471px;
-    height: 822px;
-    background-image: url("assets/img/bg-partners.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    top: -125px;
-    right: 0;
-    position: absolute;
-    pointer-events: none;
-    z-index: -1;
+  @media (max-width: 767px) {
+    &::after {
+      content: "";
+      width: 314px;
+      height: 394px;
+      background-image: url("../assets/img/bg-planet.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      top: 500px;
+      left: -117px;
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+      overflow: visible;
+    }
   }
 
-  &::after {
-    content: "";
-    width: 1798px;
-    height: 715px;
-    background-image: url("assets/img/stones.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    bottom: -40px;
-    left: 0;
-    transform: scale(-1, 1);
-    position: absolute;
-    pointer-events: none;
-    z-index: -1;
+  @media (min-width: 1024px) {
+    &::before {
+      content: "";
+      width: 1471px;
+      height: 822px;
+      background-image: url("assets/img/bg-partners.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      top: -125px;
+      right: 0;
+      position: absolute;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      width: 1798px;
+      height: 715px;
+      background-image: url("assets/img/stones.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      bottom: -40px;
+      left: 0;
+      transform: scale(-1, 1);
+      position: absolute;
+      pointer-events: none;
+      z-index: -1;
 
 
+    }
   }
 }
 </style>

@@ -13,13 +13,28 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
+  padding-top: 60px;
+
+  @media (min-width: 768px) {
+    padding-top: 0;
+    flex-direction: row;
+  }
 
   img {
     width: 100%;
     height: 100%;
     max-width: 174px;
-    max-height: 50%;
+    max-height: 50px;
     object-fit: cover;
+  }
+
+  svg {
+    margin: 30px 0 0 ;
+
+    @media (min-width: 768px) {
+      margin: 0 0 0 10px;
+    }
   }
 }
 </style>
