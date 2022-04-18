@@ -47,22 +47,22 @@ export default {
       selectedIndex: 0,
       accessibleContent: [
         {
-          title: 'EXCHANGE',
-          text: 'TBCC provides the ability to pay for goods and services with tokens.'
+          title: 'Exchange',
+          text: 'TBCC is a centralised cryptocurrency exchange powered by Binance Cloud. It has its own token TBCC and offers more than 1000 currency pairs for trading with low fees and fast transactions without passing KYC up to 2BTC.'
         },
         {
-          title: 'WALLET',
-          text: 'TBCC provides the ability to pay for goods and services with tokens.'
+          title: 'Wallet',
+          text: 'Decentralised wallet for keeping and operating crypto-assets. TBCC Wallet supports leading cryptocurrencies based on BEP2, BEP8, BEB20, and ERC-20 protocols. '
         }
       ],
       forthcomingContent: [
         {
           title: 'TBCC PAY',
-          text: 'TBCC provides the ability to pay for goods and services with tokens.'
+          text: 'Secure payment for familiar goods and services with TBCC tokens in seconds by smartphone. Use TBCC PAY for shopping without frontiers.'
         },
         {
           title: 'TBCC Investment',
-          text: 'Our investment program Dollar-Cost Averaging is popular among investors. This strategy will help you reduce the amount you pay for your investments and minimize your risk.'
+          text: 'Dollar-Cost Averaging is a popular investment strategy. It helps to invest money in equal portions, at regular intervals, regardless of the ups or downs in the market, and get more profit.'
         }
       ],
     }

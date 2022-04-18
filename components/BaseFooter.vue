@@ -4,7 +4,6 @@
       <div class='base-footer__container'>
         <div class='base-footer__nav'>
           <ul>
-            <li><a href='/'>Get Started</a></li>
             <li><a href='/'>Wallet</a></li>
             <li><a href='/'>Buy & Sell</a></li>
             <li><a href='/'>News</a></li>

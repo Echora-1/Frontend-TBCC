@@ -1,6 +1,6 @@
 <template>
   <div class='tbcc-news container'>
-    <p class='base-title'>TBCC news</p>
+    <h2 class='base-title'>TBCC news</h2>
     <div class='tbcc-news__list'>
       <client-only>
         <Flickity id='news-carousel' ref="flickity" :key='sliderKey' :options="flickityOptions">

@@ -5,7 +5,6 @@
         <icon-logo class='logo' />
         <div class='base-header__nav'>
           <nav>
-            <nuxt-link to='/' @click.native='toggleShowMenu'>Get Started</nuxt-link>
             <nuxt-link to='/' @click.native='toggleShowMenu'>Wallet</nuxt-link>
             <nuxt-link to='/' @click.native='toggleShowMenu'>Buy & Sell</nuxt-link>
             <nuxt-link to='/' @click.native='toggleShowMenu'>News</nuxt-link>

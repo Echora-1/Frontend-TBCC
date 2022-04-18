@@ -5,7 +5,7 @@
         <our-mission-img />
       </div>
       <div class='our-mission__content content'>
-        <p class='content__title base-title'>Our Mission</p>
+        <h2 class='content__title base-title'>Our mission</h2>
         <p class='content__text'>There is hardly any person today who has not heard of cryptocurrency and over 300 million were already active users. The purpose of TBCC is to create an environment for the development of cryptocurrency and simplify using it in everyday life.</p>
       </div>
     </div>

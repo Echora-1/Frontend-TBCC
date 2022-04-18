@@ -2,15 +2,15 @@
   <div class='advantage-list'>
     <div class='advantage-list__item'>
       <icon-like />
-      <p>Lowest Fees <br> at <span>0.1%</span></p>
+      <p>low fees<br> at <span> 0.1% </span></p>
     </div>
     <div class='advantage-list__item'>
       <icon-whithout-kyc />
-      <p>Without KYC <br> up to <span>2 BTC</span></p>
+      <p>without KYC<br> up to <span>2 BTC</span></p>
     </div>
     <div class='advantage-list__item'>
       <icon-rocket />
-      <p>Fast  speed up to <span>1.4 mln</span>/ sec</p>
+      <p>fast speed<br> up to <span>1.4 M/sec</span></p>
     </div>
   </div>
 </template>

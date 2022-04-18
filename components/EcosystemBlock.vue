@@ -1,8 +1,8 @@
 <template>
   <div class='ecosystem'>
     <div class='ecosystem__container container'>
-      <p class='ecosystem__title base-title'>Ecosystem</p>
-      <p class='ecosystem__subtitle'> TBCC offers up-to-date financial services that allow you to invest, earn, save and pay the bills using cryptocurrency within the same ecosystem.</p>
+      <h2 class='ecosystem__title base-title'>Ecosystem</h2>
+      <p class='ecosystem__subtitle'>TBCC is an all-in-one space where you can securely buy, keep and trade your crypto assets. We make available the latest tools and info that help you feel confident in the crypto market</p>
       <div class='ecosystem__content content'>
           <div class='content__tabs'>
             <ecosystem-tabs />

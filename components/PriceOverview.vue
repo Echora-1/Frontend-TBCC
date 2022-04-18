@@ -1,6 +1,6 @@
 <template>
   <div class='price-overview container'>
-    <p class='base-title'>Price overview</p>
+    <h2 class='base-title'>Price overview</h2>
     <tbcc-overview />
   </div>
 </template>
