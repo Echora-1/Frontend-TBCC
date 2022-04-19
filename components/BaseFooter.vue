@@ -80,7 +80,7 @@ export default {
     display: flex;
     position: relative;
     flex-direction: column;
-    padding: 50px 0;
+    padding: 50px 0 35px;
     max-width: 320px;
     margin: 0 auto;
 
@@ -88,6 +88,7 @@ export default {
       border-top: unset;
       flex-direction: row;
       max-width: unset;
+      padding: 50px 0;
     }
 
     &::after {
@@ -141,15 +142,12 @@ export default {
       @media (max-width: 767px) {
         margin-bottom: 40px;
 
-        &:nth-last-child(-n+2) {
+        &:nth-last-child(-n+3) {
           display: none;
         }
       }
-
-      &:not(:nth-child(3n)) {
-        @media (min-width: 768px) {
-          margin-bottom: 30px;
-        }
+      @media (min-width: 768px) {
+        margin-bottom: 30px;
       }
     }
 
