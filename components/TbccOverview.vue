@@ -14,9 +14,11 @@
         <p>Binance Smart Chain (BEP20): &nbsp; <span>0xf2...7fea</span>&nbsp;<copy-button id='copy-button'/></p>
       </div>
       <div class='info__actions'>
-        <base-button>
-          View Markets
-        </base-button>
+        <a href='https://www.tbcc.com/trade/TBCC_USDT' target='_blank'>
+          <base-button>
+            View Markets
+          </base-button>
+        </a>
         <base-button class='meta-mask-button'>
           Add to MetaMask
         </base-button>
@@ -209,6 +211,9 @@ export default {
       margin-bottom: 55px;
     }
 
+    a {
+      display: inline-block;
+    }
 
     button {
       background: #E2E7F8;

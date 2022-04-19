@@ -82,8 +82,16 @@ export default {
 
   @media (min-width: 768px) {
     flex-direction: row;
-    transform: translateX(20px);
   }
+
+  @media (min-width: 1024px) {
+    transform: translateX(30px);
+  }
+
+  @media (min-width: 1200px) {
+    transform: translateX(40px);
+  }
+
 
   &__tabs,
   &__cube {
