@@ -1,7 +1,10 @@
 <template>
   <div class='news-item'>
     <div class='news-item__img-wrap'>
-      <img :src='img' alt=''>
+      <picture>
+        <source type="image/webp" :srcset="imgWebp">
+        <img width='350' height='252' :src='img' :alt='title'>
+      </picture>
     </div>
     <div class='news-item__content'>
       <p>{{ title }}</p>
@@ -14,6 +17,10 @@
 export default {
   props: {
     img: {
+      type: String,
+      default: ''
+    },
+    imgWebp: {
       type: String,
       default: ''
     },
@@ -43,6 +50,8 @@ export default {
   img {
     max-width: 350px;
     width: 100%;
+    overflow: hidden;
+    object-fit: contain;
   }
 
   &__content {

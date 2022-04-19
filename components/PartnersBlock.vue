@@ -1,6 +1,9 @@
 <template>
   <div class='partners container'>
-    <img src='img/xt-logo.png' width='174' height='50'>
+    <picture>
+      <source type="image/webp" srcset="img/xt-logo.webp" width='174' height='50'>
+      <img src='img/xt-logo.png' width='174' height='50' alt='xt-logo'>
+    </picture>
     <logo-jumio />
     <logo-coin-market-cap />
     <logo-binance />
@@ -26,7 +29,7 @@
     height: 100%;
     max-width: 174px;
     max-height: 50px;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   svg {

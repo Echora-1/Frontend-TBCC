@@ -4,7 +4,7 @@
     <div class='tbcc-news__list'>
       <client-only>
         <Flickity id='news-carousel' ref="flickity" :key='sliderKey' :options="flickityOptions">
-          <news-item v-for='(item, index) in newsItems' :key='index' :img='item.img' :title='item.title' :link='item.link' class='tbcc-news__item' />
+          <news-item v-for='(item, index) in newsItems' :key='index' :img='item.img' :img-webp='item.imgWebp' :title='item.title' :link='item.link' class='tbcc-news__item' />
         </Flickity>
       </client-only>
     </div>
@@ -20,31 +20,37 @@ export default  {
       newsItems: [
         {
           img: 'img/news-features.png',
+          imgWebp: 'img/news-features.webp',
           title: 'TBCC Token Features: fast and secure.',
           link: "/"
         },
         {
           img: 'img/news-staking.png',
           title: 'TBCC Staking has launchd',
+          imgWebp: 'img/news-staking.webp',
           link: "/"
         },
         {
           img: 'img/news-trading.png',
+          imgWebp: 'img/news-trading.webp',
           title: 'Start trading TBCC/DOGE on B8DEX',
           link: "/"
         },
         {
           img: 'img/news-features.png',
+          imgWebp: 'img/news-features.webp',
           title: 'TBCC Token Features: fast and secure.',
           link: "/"
         },
         {
           img: 'img/news-staking.png',
+          imgWebp: 'img/news-staking.webp',
           title: 'TBCC Staking has launchd',
           link: "/"
         },
         {
           img: 'img/news-trading.png',
+          imgWebp: 'img/news-trading.webp',
           title: 'Start trading TBCC/DOGE on B8DEX',
           link: "/"
         }

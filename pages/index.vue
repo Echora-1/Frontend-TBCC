@@ -200,10 +200,10 @@ export default {
       content: "";
       width: 1798px;
       height: 715px;
-      background-image: url("assets/img/stones.png");
+      background-image: url("assets/img/stones.webp");
       background-repeat: no-repeat;
       background-position: center;
-      background-size: cover;
+      background-size: contain;
       bottom: -100px;
       right: 0;
       position: absolute;
@@ -290,10 +290,10 @@ export default {
       content: "";
       width: 1798px;
       height: 715px;
-      background-image: url("assets/img/stones.png");
+      background-image: url("assets/img/stones.webp");
       background-repeat: no-repeat;
       background-position: center;
-      background-size: cover;
+      background-size: contain;
       bottom: -40px;
       left: 0;
       transform: scale(-1, 1);
