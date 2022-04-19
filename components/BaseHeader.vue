@@ -101,7 +101,7 @@ nav {
   margin: 0 auto;
 
  a {
-   font-weight: 300;
+   font-weight: 400;
    font-size: 16px;
    line-height: 16px;
    color: #FFFFFF;
