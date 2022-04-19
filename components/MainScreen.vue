@@ -216,7 +216,7 @@ export default {
     line-height: 125%;
     color: #CED7E7;
     margin: 0 auto 30px;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 18px;
     text-align: center;
 

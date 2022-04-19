@@ -108,7 +108,7 @@ export default {
 
   &__text {
     color: #6983AB;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     margin: 0;

@@ -51,7 +51,7 @@ export default {
 
   &__subtitle {
     margin: 0 auto;
-    font-weight: 500;
+    font-weight: 400;
     color: #6983AB;
     text-align: center;
     font-size: 16px;

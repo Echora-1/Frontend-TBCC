@@ -17,16 +17,16 @@
           <div class='actions__community'>
             <p>Community</p>
             <div class='actions__community-list'>
-              <a href='/'>
+              <a href='https://www.instagram.com/tbcc_token_global/' target="_blank">
                 <icon-instagram />
               </a>
-              <a href='/'>
+              <a href='https://t.me/tbccglobal' target="_blank">
                 <icon-telegram />
               </a>
-              <a href='/'>
+              <a href='https://www.facebook.com/TBCC.lab' target="_blank">
                 <icon-facebook />
               </a>
-              <a href='/'>
+              <a href='https://twitter.com/TBCC_ex' target="_blank">
                 <icon-twitter />
               </a>
             </div>
