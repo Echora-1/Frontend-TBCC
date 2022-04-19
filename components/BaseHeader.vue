@@ -5,11 +5,11 @@
         <icon-logo class='logo' />
         <div class='base-header__nav'>
           <nav>
-            <nuxt-link to='/' @click.native='toggleShowMenu'>Wallet</nuxt-link>
-            <nuxt-link to='/' @click.native='toggleShowMenu'>Buy & Sell</nuxt-link>
-            <nuxt-link to='/' @click.native='toggleShowMenu'>News</nuxt-link>
-            <nuxt-link to='/' @click.native='toggleShowMenu'>Exchange</nuxt-link>
-            <nuxt-link to='/' @click.native='toggleShowMenu'>Company</nuxt-link>
+            <nuxt-link to='/' @click.native='closeMenu'>Wallet</nuxt-link>
+            <nuxt-link to='/' @click.native='closeMenu'>Buy & Sell</nuxt-link>
+            <nuxt-link to='/' @click.native='closeMenu'>News</nuxt-link>
+            <nuxt-link to='/' @click.native='closeMenu'>Exchange</nuxt-link>
+            <nuxt-link to='/' @click.native='closeMenu'>Company</nuxt-link>
           </nav>
           <div class='actions'>
             <base-dropdown
@@ -19,7 +19,7 @@
               item-key="language"
               :default-value="languages[0]"
               @selected="(value) => selectLanguage(value)" />
-            <base-button shaded class='actions__sign-in' @click.native='toggleShowMenu'>
+            <base-button shaded class='actions__sign-in' @click.native='closeMenu'>
               Sign In
             </base-button>
           </div>
@@ -47,7 +47,7 @@ export default {
 
   watch: {
     isShowMenu() {
-      if(this.isShowMenu) {
+      if(this.isShowMenu && window.innerWidth < 1024) {
         document.body.style.overflow = 'hidden'
       } else  {
         document.body.style.overflow = 'visible'
@@ -89,6 +89,10 @@ export default {
     toggleShowMenu() {
       this.isShowMenu = !this.isShowMenu;
     },
+
+    closeMenu() {
+      this.isShowMenu = false;
+    }
   }
 }
 </script>
