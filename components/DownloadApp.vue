@@ -17,7 +17,7 @@
           <source type="image/webp" media="(min-width: 768px)" srcset="img/app.webp" width='282' height='573'>
           <source type="image/webp" srcset="img/app-mobile.webp" width='375' height='390'>
           <source media="(min-width: 768px)" srcset="img/app.png" width='282' height='573'>
-          <img src="img/app-mobile.png" width='375' height='390' alt='app'>
+          <img loading='lazy' src="img/app-mobile.png" width='375' height='390' alt='app'>
         </picture>
       </div>
     </div>

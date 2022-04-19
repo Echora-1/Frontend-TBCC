@@ -6,7 +6,6 @@
           <ul>
             <li><a href='/'>Wallet</a></li>
             <li><a href='/'>Buy & Sell</a></li>
-            <li><a href='/'>News</a></li>
             <li><a href='/'>Exchange</a></li>
             <li><a href='/'>Company</a></li>
             <li><a href='/'>Terms of use</a></li>

@@ -7,7 +7,6 @@
           <nav>
             <nuxt-link to='/' @click.native='closeMenu'>Wallet</nuxt-link>
             <nuxt-link to='/' @click.native='closeMenu'>Buy & Sell</nuxt-link>
-            <nuxt-link to='/' @click.native='closeMenu'>News</nuxt-link>
             <nuxt-link to='/' @click.native='closeMenu'>Exchange</nuxt-link>
             <nuxt-link to='/' @click.native='closeMenu'>Company</nuxt-link>
           </nav>
@@ -108,7 +107,7 @@ nav {
    color: #FFFFFF;
 
    &:not(:last-child) {
-     margin-right: 40px;
+     margin-right: 90px;
    }
 
    @media (max-width: 1023px) {

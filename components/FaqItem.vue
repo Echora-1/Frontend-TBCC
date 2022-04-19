@@ -1,7 +1,7 @@
 <template>
     <nuxt-link to='/' class='faq-item'>
       <div class='faq-item__img'>
-        <img :src="icon" :alt='title'>
+        <img loading='lazy' :src="icon" :alt='title'>
       </div>
       <p>{{ title }}</p>
     </nuxt-link>

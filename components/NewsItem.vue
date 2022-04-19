@@ -3,7 +3,7 @@
     <div class='news-item__img-wrap'>
       <picture>
         <source type="image/webp" :srcset="imgWebp">
-        <img width='350' height='252' :src='img' :alt='title'>
+        <img loading='lazy' width='350' height='252' :src='img' :alt='title'>
       </picture>
     </div>
     <div class='news-item__content'>
