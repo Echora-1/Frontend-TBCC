@@ -111,6 +111,9 @@ export default {
   @media (min-width: 768px) {
     padding-bottom: 100px;
 
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px){
     &::before {
       display: none;
     }
@@ -165,12 +168,15 @@ export default {
   }
 
 
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1023px){
     padding-bottom: 160px;
-
     &::before {
       display: none;
     }
+  }
+
+  @media (min-width: 768px) {
+    padding-bottom: 160px;
   }
 
 
