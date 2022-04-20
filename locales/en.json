@@ -1,0 +1,13 @@
+{
+  "nav": [
+      "Wallet",
+      "Buy & Sell",
+      "Exchange",
+      "Company"
+  ],
+  "singIn": "Sign In",
+  "mScrTitle": "Powerful Ecosystem in One Place",
+  "mScrSubtitle": "Pay, trade, and invest in the smart decentralized ecosystem.",
+  "mScrBuyTBCC": "Buy TBCC",
+  "mScrCreateAccount": "Create Account"
+}

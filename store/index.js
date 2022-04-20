@@ -1,9 +1,9 @@
 export const state = () => ({
-  price: 0.1175,
-  percentChange: 1.45,
-  vol24h: '10924777',
-  highPrice:  0.1218,
-  lowPrice: 0.1170
+  price: 0.1135,
+  percentChange: 1.57,
+  vol24h: '11726815',
+  highPrice:  0.1169,
+  lowPrice: 0.1130
 })
 
 export const mutations  = {

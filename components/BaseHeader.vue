@@ -5,10 +5,7 @@
         <icon-logo class='logo' />
         <div class='base-header__nav'>
           <nav>
-            <nuxt-link to='/' @click.native='closeMenu'>Wallet</nuxt-link>
-            <nuxt-link to='/' @click.native='closeMenu'>Buy & Sell</nuxt-link>
-            <nuxt-link to='/' @click.native='closeMenu'>Exchange</nuxt-link>
-            <nuxt-link to='/' @click.native='closeMenu'>Company</nuxt-link>
+            <nuxt-link v-for="(item, index) in $t('nav')" :key='index' :to="localePath('/')" @click.native='closeMenu' >{{ item }}</nuxt-link>
           </nav>
           <div class='actions'>
             <base-dropdown
@@ -19,7 +16,7 @@
               :default-value="languages[0]"
               @selected="(value) => selectLanguage(value)" />
             <base-button shaded class='actions__sign-in' @click.native='closeMenu'>
-              Sign In
+              {{ $t('singIn') }}
             </base-button>
           </div>
         </div>
@@ -38,7 +35,7 @@ export default {
   components: { MenuButton, BaseDropdown, BaseButton, IconLogo },
   data() {
     return {
-      languages: [ { language: 'En', id: 1, value: 'en' }, { language: 'Ch', id: 2, value: 'ch' }, { language: 'Tur', id: 3, value: 'tur' }],
+      languages: [ { language: 'En', id: 1, value: 'en' }, { language: 'Ch', id: 2, value: 'ch' }, { language: 'Tur', id: 3, value: 'tur' }, { language: 'Ru', id: 4, value: 'ru' }],
       currentLanguage: 'en',
       isShowMenu: false,
     }
@@ -51,10 +48,11 @@ export default {
       } else  {
         document.body.style.overflow = 'visible'
       }
-    }
+    },
   },
 
   mounted() {
+    this.currentLanguage = this.$i18n.localeProperties.code || 'en';
     window.addEventListener('scroll', this.scrollHeader)
   },
 
@@ -83,6 +81,7 @@ export default {
 
     selectLanguage (value) {
       this.currentLanguage = value.value
+      this.$i18n.setLocale(this.currentLanguage);
     },
 
     toggleShowMenu() {

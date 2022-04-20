@@ -1054,7 +1054,7 @@
 import { gsap } from "gsap";
 export default {
   mounted() {
-    const main = gsap.timeline({delay: 1});
+    const main = gsap.timeline({delay: 0.5});
     main.to('.pers',{x: 0, y: 0, duration:2} )
     main.to('.cube', {scaleX: 1, scaleY: 1, duration:2, stagger: .5, ease: "back.out(1.7)",}, "-=1" )
     main.to('.star', { opacity: 1, duration: 2}, "-=2" )
@@ -1069,7 +1069,7 @@ svg {
 }
 
 .pers {
-  transform: matrix(1,0,0,1,500,-500);
+  transform: matrix(1,0,0,1,550,-550);
 }
 
 .cube1 {

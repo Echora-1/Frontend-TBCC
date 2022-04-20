@@ -1,3 +1,5 @@
+import i18n from './i18n'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -40,6 +42,7 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
+    '@nuxtjs/i18n',
   ],
 
   axios: {
@@ -48,6 +51,12 @@ export default {
 
   proxy: {
     '/api/': { target: 'https://www.tbcc.com/', pathRewrite: {'^/api/': ''}, changeOrigin: true }
+  },
+
+  i18n: {
+    locales: [ 'en', 'ch', 'tur', 'ru'],
+    defaultLocale: 'en',
+    vueI18n: i18n
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

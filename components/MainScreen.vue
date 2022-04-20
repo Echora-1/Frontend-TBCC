@@ -2,14 +2,14 @@
   <div class='main-screen'>
     <div class='main-screen__container container'>
       <div class='main-screen__content content'>
-        <h1 class='content__title base-title'>Powerful Ecosystem in One Place</h1>
-        <h2 class='content__description'>Pay, trade, and invest in the smart decentralized ecosystem.</h2>
+        <h1 class='content__title base-title'>{{ $t('mScrTitle') }}</h1>
+        <h2 class='content__subtitle'>{{ $t('mScrSubtitle') }}</h2>
         <div class='content__actions'>
           <base-button shaded>
-            Buy TBCC
+            {{ $t('mScrBuyTBCC') }}
           </base-button>
           <base-button>
-            Create Account
+            {{ $t('mScrCreateAccount') }}
           </base-button>
         </div>
       </div>
@@ -211,7 +211,7 @@ export default {
     }
   }
 
-  &__description {
+  &__subtitle {
     max-width: 300px;
     line-height: 125%;
     color: #CED7E7;
