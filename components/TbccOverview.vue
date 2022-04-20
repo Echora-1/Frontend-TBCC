@@ -11,7 +11,7 @@
       </div>
       <div class='info__address'>
         <p id='content-holder'>0xf29480344d8e21efeab7fde39f8d8299056a7fea</p>
-        <p>Binance Smart Chain (BEP20): &nbsp; <span>0xf2...7fea</span>&nbsp;<copy-button id='copy-button'/></p>
+        <p>Binance Smart Chain (BEP20): &nbsp; <span>0xf2...7fea</span>&nbsp;<copy-button aria-label='copy address' id='copy-button'/></p>
       </div>
       <div class='info__actions'>
         <a href='https://www.tbcc.com/trade/TBCC_USDT' target='_blank'>

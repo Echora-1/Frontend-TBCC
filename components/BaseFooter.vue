@@ -18,15 +18,19 @@
             <p>Community</p>
             <div class='actions__community-list'>
               <a href='https://www.instagram.com/tbcc_token_global/' target="_blank">
+                <span class='visually-hidden'>tbcc instagram</span>
                 <icon-instagram />
               </a>
               <a href='https://t.me/tbccglobal' target="_blank">
+                <span class='visually-hidden'> tbcc telegram</span>
                 <icon-telegram />
               </a>
               <a href='https://www.facebook.com/TBCC.lab' target="_blank">
+                <span class='visually-hidden'>tbcc facebook</span>
                 <icon-facebook />
               </a>
               <a href='https://twitter.com/TBCC_ex' target="_blank">
+                <span class='visually-hidden'>tbcc twitter</span>
                 <icon-twitter />
               </a>
             </div>
@@ -34,10 +38,10 @@
           <div class='actions__app'>
             <p>Download App</p>
             <div>
-              <base-button>
+              <base-button aria-label='download ios app'>
                 <icon-ios :fill='"#FFFFFF"' />
               </base-button>
-              <base-button>
+              <base-button aria-label='download android app'>
                 <icon-android :fill='"#FFFFFF"' />
               </base-button>
             </div>

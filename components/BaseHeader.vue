@@ -5,11 +5,12 @@
         <icon-logo class='logo' />
         <div class='base-header__nav'>
           <nav>
-            <nuxt-link v-for="(item, index) in $t('nav')" :key='index' :to="localePath('/')" @click.native='closeMenu' >{{ item }}</nuxt-link>
+            <nuxt-link v-for="(item, index) in $t('nav')" :key='index' class='btn-2' :to="localePath('/')" @click.native='closeMenu' >{{ item }}</nuxt-link>
           </nav>
           <div class='actions'>
             <base-dropdown
-              id="language"
+              :label="'select language'"
+              :id="'language'"
               class="actions__language"
               :list="languages"
               item-key="language"
@@ -98,6 +99,7 @@ export default {
 <style lang='scss' scoped>
 nav {
   margin: 0 auto;
+  display: flex;
 
  a {
    font-weight: 400;
@@ -240,4 +242,33 @@ nav {
     border-radius: 20px;
   }
 }
+
+.btn-2 {
+  position: relative;
+}
+
+.btn-2:after {
+  @media (min-width: 1024px) {
+    backface-visibility: hidden;
+    border: 1px solid rgba(#fff, 0);
+    bottom: -7px;
+    content: " ";
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    transition: all 280ms ease-in-out;
+    width: 0;
+    overflow: visible;
+  }
+}
+
+.btn-2:hover:after {
+  @media (min-width: 1024px) {
+    backface-visibility: hidden;
+    border-color: #21C1D4;
+    transition: width 350ms ease-in-out;
+    width: calc(100% + 8px);
+  }
+}
+
 </style>

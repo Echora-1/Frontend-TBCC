@@ -2,7 +2,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
-  font-display: swap;
+  font-display: fallback;
   src:
     local("Roboto"),
     url('../fonts/Roboto-Light.woff2') format('woff2'),
@@ -15,7 +15,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: fallback;
   src:
     local("Roboto"),
     url('../fonts/Roboto-Regular.woff2') format('woff2'),
@@ -27,7 +27,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
+  font-display: fallback;
   src:
     local("Roboto"),
     url('../fonts/Roboto-Medium.woff2') format('woff2'),
@@ -39,7 +39,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
+  font-display: fallback;
   src:
     local("Roboto"),
     url('../fonts/Roboto-Bold.woff2') format('woff2'),
@@ -97,6 +97,19 @@ a {
   .container {
     /*max-width: 1440px;*/
   }
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .base-title {

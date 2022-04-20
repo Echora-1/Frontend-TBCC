@@ -175,6 +175,7 @@ export default {
 .base-label {
   color: white;
   font-size: 18px;
+  display: none;
 }
 
 .list-selector___dropdown {

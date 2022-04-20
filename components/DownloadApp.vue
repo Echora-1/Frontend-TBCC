@@ -25,11 +25,11 @@
       <h2 class='content__title base-title'>Download TBCC App</h2>
       <p class='content__text'>Wherever you are, don't miss your chance to make more money with our Exchange. The reliable and easy-to-use TBCC App is always at your fingertips.</p>
       <div class='content__buttons'>
-        <base-button>
+        <base-button aria-label='download ios app'>
           <icon-ios />
           iOS
         </base-button>
-        <base-button>
+        <base-button aria-label='download android app'>
           <icon-android />
           Android
         </base-button>
