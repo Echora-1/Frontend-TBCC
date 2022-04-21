@@ -2,15 +2,17 @@
   <header :class="['base-header', {'base-header--menu-open': isShowMenu}]">
     <div class='base-header__wrap'>
       <div class='base-header__container container'>
-        <icon-logo class='logo' />
+        <nuxt-link :to='localePath("/")'>
+          <icon-logo class='logo'/>
+        </nuxt-link>
         <div class='base-header__nav'>
           <nav>
-            <nuxt-link v-for="(item, index) in $t('nav')" :key='index' class='btn-2' :to="localePath('/')" @click.native='closeMenu' >{{ item }}</nuxt-link>
+            <nuxt-link v-for="(item, index) in navLink" :key='index' :to="localePath(item)" @click.native='closeMenu' >{{ $t(`nav[${index}]`) }}</nuxt-link>
           </nav>
           <div class='actions'>
             <base-dropdown
-              :label="'select language'"
               :id="'language'"
+              :label="'select language'"
               class="actions__language"
               :list="languages"
               item-key="language"
@@ -39,6 +41,13 @@ export default {
       languages: [ { language: 'En', id: 1, value: 'en' }, { language: 'Ch', id: 2, value: 'ch' }, { language: 'Tur', id: 3, value: 'tur' }, { language: 'Ru', id: 4, value: 'ru' }],
       currentLanguage: 'en',
       isShowMenu: false,
+      navLink: ['wallet', '/',  '/', '/']
+    }
+  },
+
+  computed: {
+    currentLocale() {
+      return  this.$i18n.localeProperties.code;
     }
   },
 
@@ -106,6 +115,11 @@ nav {
    font-size: 16px;
    line-height: 16px;
    color: #FFFFFF;
+   transition: color 0.5s;
+
+   &:hover {
+     color: #66B6FF;
+   }
 
    &:not(:last-child) {
      margin-right: 90px;
@@ -242,33 +256,4 @@ nav {
     border-radius: 20px;
   }
 }
-
-.btn-2 {
-  position: relative;
-}
-
-.btn-2:after {
-  @media (min-width: 1024px) {
-    backface-visibility: hidden;
-    border: 1px solid rgba(#fff, 0);
-    bottom: -7px;
-    content: " ";
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    transition: all 280ms ease-in-out;
-    width: 0;
-    overflow: visible;
-  }
-}
-
-.btn-2:hover:after {
-  @media (min-width: 1024px) {
-    backface-visibility: hidden;
-    border-color: #21C1D4;
-    transition: width 350ms ease-in-out;
-    width: calc(100% + 8px);
-  }
-}
-
 </style>
