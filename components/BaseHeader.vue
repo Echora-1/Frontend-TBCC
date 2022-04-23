@@ -3,6 +3,7 @@
     <div class='base-header__wrap'>
       <div class='base-header__container container'>
         <nuxt-link :to='localePath("/")'>
+          <span class='visually-hidden'>home page</span>
           <icon-logo class='logo'/>
         </nuxt-link>
         <div class='base-header__nav'>

@@ -199,8 +199,8 @@ export default {
     &::after {
       content: "";
       width: 1798px;
-      height: 715px;
-      background-image: url("assets/img/stones.webp");
+      height: 716px;
+      background-image: url("assets/img/stones.png");
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
@@ -209,6 +209,14 @@ export default {
       position: absolute;
       pointer-events: none;
       z-index: -1;
+
+      @media 	only screen and (-webkit-min-device-pixel-ratio: 1.5),
+      only screen and (min--moz-device-pixel-ratio: 1.5),
+      only screen and (-o-min-device-pixel-ratio: 3/2),
+      only screen and (min-resolution: 1.5dppx),
+      only screen and (min-resolution: 144dpi)  {
+        background-image: url("assets/img/stones@2x.png");
+      }
     }
   }
 }
@@ -289,8 +297,8 @@ export default {
     &::after {
       content: "";
       width: 1798px;
-      height: 715px;
-      background-image: url("assets/img/stones.webp");
+      height: 716px;
+      background-image: url("assets/img/stones.png");
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
@@ -301,7 +309,13 @@ export default {
       pointer-events: none;
       z-index: -1;
 
-
+      @media 	only screen and (-webkit-min-device-pixel-ratio: 1.5),
+      only screen and (min--moz-device-pixel-ratio: 1.5),
+      only screen and (-o-min-device-pixel-ratio: 3/2),
+      only screen and (min-resolution: 1.5dppx),
+      only screen and (min-resolution: 144dpi)  {
+        background-image: url("assets/img/stones@2x.png");
+      }
     }
   }
 }

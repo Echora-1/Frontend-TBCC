@@ -9,8 +9,8 @@
     </div>
     <div class='wallet-main-screen__img-wrap'>
       <picture>
-        <source type="image/webp" srcset="img/wallet-main-screen.webp 1x, img/wallet-main-screen@2x.webp 2x,">
-        <img src="img/wallet-main-screen.png" class='wallet-main-screen__img' srcset="img/wallet-main-screen@2x.png 2x" width='667' height='657' alt='wallet'>
+        <source type="image/webp" srcset='img/wallet-main-screen.webp 1x, img/wallet-main-screen@2x.webp 2x,'>
+        <img src='img/wallet-main-screen.png' class='wallet-main-screen__img' srcset='img/wallet-main-screen@2x.png 2x' width='667' height='657' alt='wallet'>
       </picture>
     </div>
   </div>
