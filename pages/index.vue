@@ -73,12 +73,12 @@ export default {
   @media (min-width: 1024px) {
     &::before {
       content: "";
-      width: 1497px;
+      width: 1198px;
       height: 915px;
-      background-image: url("assets/img/bg-main-screen.svg");
+      background-image: url("assets/img/bg-main-screen.png");
       background-repeat: no-repeat;
       background-position: center;
-      background-size: cover;
+      background-size: contain;
       top: 0;
       right: 0;
       position: absolute;
@@ -122,13 +122,13 @@ export default {
   @media (min-width: 1024px) {
     &::before {
       content: "";
-      width: 1145px;
-      height: 822px;
+      width: 554px;
+      height: 665px;
       background-image: url("assets/img/bg-our-mission.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
-      top: 340px;
+      top: 330px;
       right: 0;
       position: absolute;
       pointer-events: none;
@@ -282,7 +282,7 @@ export default {
     &::before {
       content: "";
       width: 1471px;
-      height: 822px;
+      height: 734px;
       background-image: url("assets/img/bg-partners.svg");
       background-repeat: no-repeat;
       background-position: center;
