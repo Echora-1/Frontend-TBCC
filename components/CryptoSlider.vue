@@ -25,56 +25,56 @@ export default {
       },
       slideContent: [
         {
-          img: 'img/crypto-currencies/bitcoin.svg',
+          img: 'bitcoin',
           fullName: 'Bitcoin',
           name: 'BTC',
           price: '43,650.89',
           percentChange: '+5.37'
         },
         {
-          img: 'img/crypto-currencies/bnb.svg',
+          img: 'bnb',
           fullName: 'BinanceCoin',
           name: 'BNB',
           price: '418.8',
           percentChange: '+1.98'
         },
         {
-          img: 'img/crypto-currencies/eth.svg',
+          img: 'eth',
           fullName: 'Ethereum',
           name: 'ETH',
           price: '3,051.20',
           percentChange: '-2.57'
         },
         {
-          img: 'img/crypto-currencies/tbcc.svg',
+          img: 'tbcc',
           fullName: 'TBCC',
           name: 'TBCC',
           price: '0.145',
           percentChange: '+7.41'
         },
         {
-          img: 'img/crypto-currencies/bitcoin.svg',
+          img: 'bitcoin',
           fullName: 'Bitcoin',
           name: 'BTC',
           price: '43,650.89',
           percentChange: '+5.37'
         },
         {
-          img: 'img/crypto-currencies/bnb.svg',
+          img: 'bnb',
           fullName: 'BinanceCoin',
           name: 'BNB',
           price: '418.8',
           percentChange: '+1.98'
         },
         {
-          img: 'img/crypto-currencies/eth.svg',
+          img: 'eth',
           fullName: 'Ethereum',
           name: 'ETH',
           price: '3,051.20',
           percentChange: '-2.57'
         },
         {
-          img: 'img/crypto-currencies/tbcc.svg',
+          img: 'tbcc',
           fullName: 'TBCC',
           name: 'TBCC',
           price: '0.145',

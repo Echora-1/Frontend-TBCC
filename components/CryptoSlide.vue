@@ -5,7 +5,7 @@
         Buy Now
       </base-button>
     </div>
-    <img class='crypto-slide__img' :src='content.img' :alt='`logo-${content.name}`' width='36p' height='36'>
+    <img class='crypto-slide__img' :src='require(`../assets/img/crypto-currencies/${content.img}.svg`)' :alt='`logo-${content.name}`' width='36p' height='36'>
     <div class='crypto-slide__content'>
       <p class='crypto-slide__name'>{{ content.fullName }} <span>{{ content.name }}</span></p>
       <p class='crypto-slide__price'>${{ content.price }}</p>
